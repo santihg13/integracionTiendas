@@ -49,3 +49,11 @@ def my_view(request):
         error_message = response.text
         # Maneja el error según tus necesidades
         return JsonResponse({'error': error_message}, status=response.status_code)  # Devuelve un mensaje de error en JSON
+
+def index(request):
+    productos = Producto.objects.all()
+    return render(request, 'index.html', {'productos': productos})
+
+def detalle_producto(request, producto_id):
+    producto = Producto.objects.get(id=producto_id)
+    return render(request, 'detalle_producto.html', {'producto': producto})
