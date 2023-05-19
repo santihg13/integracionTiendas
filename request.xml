@@ -1,0 +1,11 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://localhost:8000/ventas/soap/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <web:RegistrarVenta>
+            <nombre_aplicacion>Nombre de la aplicación</nombre_aplicacion>
+            <id_tienda>123</id_tienda>
+            <monto_venta>100.0</monto_venta>
+            <nombre_vista>Nombre de la vista</nombre_vista>
+        </web:RegistrarVenta>
+    </soapenv:Body>
+</soapenv:Envelope>
