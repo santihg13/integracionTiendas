@@ -41,4 +41,6 @@ urlpatterns = [
     path('ventas/<str:nombre_aplicacion>/<int:id_tienda>/<float:monto_venta>/<str:nombre_vista>/', views.registrar_venta),
     path('ventas/soap/', RegistroVentaService.registrar_venta, name='registrar_venta_soap'),
     path('my-view/', views.my_view, name='my-view'),
+    path('', views.index, name='index'),
+    path('producto/<int:producto_id>/', views.detalle_producto, name='detalle_producto'),
 ]
